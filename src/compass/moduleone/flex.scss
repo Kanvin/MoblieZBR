@@ -1,0 +1,93 @@
+@import "compass/css3";
+@import "compass/layout/stretching";
+@import "compass/utilities";
+@import "../compass/base/basic.scss";
+@mixin flex_row {
+    padding: 0;
+    margin: 0;
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-start);
+    @include flex(1);
+}
+
+@mixin flex_column {
+	padding:0;
+	margin:0;
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+@mixin list {
+    li {
+        font-size: 1.6rem;
+        width: 20rem;
+        margin: .2rem;
+        padding: .2rem;
+        border: .1rem solid #ccc;
+        background: #999999;
+        @include display-flex(inline-flex);
+        @include align-items(center);
+        @include justify-content(center);
+    }
+}
+
+%stretched {
+  $stretch-color: #4c6b99;
+  border: .2rem solid $stretch-color;
+  @include border-radius(.4rem);
+  display: block;
+  background-color: darken($stretch-color, 10%);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+}
+ 
+.main_container {
+    @include flex_row;
+    padding: 4rem;
+    $stretch-color: #4c6b99;
+    section{
+    	@extend %stretched ;
+    	border: .2rem solid #CCC;
+    	height: 40rem;
+    	font-size: 1.4rem;
+    	margin: 0 0 2rem;
+    	@include flex(4);
+    }
+
+    aside{
+    	font-size: 1.8rem;
+    	height: 40rem;
+    	border: .2rem solid #CCC;
+    	@include flex(2);
+    	text-align: center;
+    	li{
+    		list-style-type: none;
+    	}
+    }
+}
+
+#main_header {
+	margin:2rem;
+	text-align: center;
+}
+
+#main_nav {
+    @include flex_row;
+    ul {
+        @include list;
+    }
+}
+
+
+#main_footer {
+    @include flex_row;
+    ul {
+        @include list;
+    }
+}

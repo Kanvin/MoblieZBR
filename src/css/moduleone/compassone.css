@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* line 5, ../../compass/base/basic.scss */
+body {
+  font-size: 62.5%;
+}
+
+/* line 8, ../../compass/base/basic.scss */
+#wrapper {
+  background: #CCCCCC;
+}
+
+/* line 3, ../../compass/moduleone/compassone.scss */
+.wrapper {
+  padding: 2em;
+  font-size: 1.2rem;
+}
+/* line 6, ../../compass/moduleone/compassone.scss */
+.wrapper div {
+  background-color: blue;
+  border: 10px solid rgba(255, 0, 0, 0.5);
+  font-size: 1.6rem;
+  text-align: center;
+  text-shadow: #0000cc, 2px, 2px;
+  margin-bottom: 2em;
+}
+/* line 14, ../../compass/moduleone/compassone.scss */
+.wrapper #padding_box {
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 17, ../../compass/moduleone/compassone.scss */
+.wrapper #border_box {
+  -moz-background-clip: border;
+  -o-background-clip: border-box;
+  -webkit-background-clip: border;
+  background-clip: border-box;
+}
+
+/* line 22, ../../compass/moduleone/compassone.scss */
+#vertical_center {
+  padding: 0;
+}
+/* line 24, ../../compass/moduleone/compassone.scss */
+#vertical_center li {
+  background: #CCC;
+  width: 13rem;
+  margin: .5rem;
+  height: 5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  vertical-align: center;
+  /*如果不支持flexbox布局，默认浏览器布局*/
+  display: inline-block;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 40, ../../compass/moduleone/compassone.scss */
+#flexable {
+  padding: 0;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 45, ../../compass/moduleone/compassone.scss */
+#flexable li {
+  background: #CCC;
+  font-size: 1.4rem;
+  margin: .5rem;
+  padding: .5rem;
+  min-width: 15rem;
+  display: inline-block;
+  -webkit-flex: 1 0;
+  flex: 1 0;
+}
