@@ -13,7 +13,7 @@
 	var config = {
 		pkg: grunt.file.readJSON('package.json'),
 		business: '/*\n' +
-			'*  Copyright <%= grunt.template.today("yyyy-mm-dd")%>  wanyan.com \n' +
+			'*  Copyright <%= grunt.template.today("yyyy-mm-dd")%>  company.com \n' +
 			'*  Author Kanvin.Chen \n Email:kanvin@icloud.com' +
 			'*/\n',
 		appNmae: 'MoblieZBR', //项目名称
