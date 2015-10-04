@@ -1,3 +1,0 @@
-require(['backbone'],function(backbone){
-	 
-})
