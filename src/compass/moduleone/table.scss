@@ -1,0 +1,28 @@
+@import "compass/css3";
+@import "compass/utilities/tables/";
+@import "../base/basic.scss";
+.wrapper>header>h2 {
+    text-align: center;
+}
+
+section {
+    border: .2rem solid green;
+    width: 60rem;
+    height: 30rem;
+    padding: .5rem 2rem;
+    margin: .5rem 2rem;
+    @include border-radius(.2rem);
+}
+
+
+section>table {
+	font-size: 1.4rem;
+	$table-color: #7a98c6;
+    @include table-scaffolding;
+    @include inner-table-borders(.1rem, darken($table-color, 40%));
+    @include outer-table-borders(.1rem);
+    @include alternating-rows-and-columns(green, adjust-hue(green, -160deg), #222222);
+    th{
+    	font: 1.6rem bold;
+    }
+}
