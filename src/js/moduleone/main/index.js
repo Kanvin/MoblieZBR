@@ -26,10 +26,10 @@ require(['backbone'], function(backbone) {
 
     $("#first_form input").on('change', function() {
         formArray = $('form').serializeArray();
-        console.dirxml(getFormJson('#first_form');
+        console.log(getFormJson('#first_form'));
     });
 
-     //将表单转换成JSON对象
+     //将表单转换成可以给Ajax用的对象
     function getFormJson(form) {
         var o = {};
         var a = $(form).serializeArray();
