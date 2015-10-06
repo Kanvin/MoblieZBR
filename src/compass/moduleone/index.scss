@@ -1,5 +1,10 @@
 @import "compass/css3";
-
+@import "../base/basic.scss";
 #main_wrapper{
 
+}
+
+.main_first{
+	border:.2rem solid green;
+	font-size: 1.4rem;
 }
