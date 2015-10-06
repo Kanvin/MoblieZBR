@@ -29,7 +29,7 @@ require(['backbone'], function(backbone) {
         console.dirxml(getFormJson('#first_form');
     });
 
-     //将表单转换成数组
+     //将表单转换成JSON对象
     function getFormJson(form) {
         var o = {};
         var a = $(form).serializeArray();
