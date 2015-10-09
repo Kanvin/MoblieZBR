@@ -14,7 +14,7 @@
 		pkg: grunt.file.readJSON('package.json'),
 		business: '/*\n' +
 			'*  Copyright <%= grunt.template.today("yyyy-mm-dd")%>  company.com \n' +
-			'*  Author Kanvin.Chen \n Email:kanvin@icloud.com' +
+			'*  Author Kanvin.Chen \n Email:kanvin.chen@icloud.com' +
 			'*/\n',
 		appNmae: 'MoblieZBR', //项目名称
 		serverHost: 'localhost', //项目的服务器地址
