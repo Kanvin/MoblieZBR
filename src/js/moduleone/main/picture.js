@@ -222,7 +222,10 @@ require(['backbone'], function(backbone) {
             var piclist = this.collection.models;
 
             for (var i = 0; i < piclist.length; i++) {
-                this.el.innerHTML += "<section id='main_section'>" + "<header id='header'><h2>"+piclist[i].get('picDescription')+"</h2></header>" + "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
+                this.el.innerHTML += "<section id='main_section'>" 
+                + "<header id='header'><h2>"+piclist[i].get('picDescription')
+                +"</h2></header>" +
+                 "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
             }
         },
         addEvent:function(){
