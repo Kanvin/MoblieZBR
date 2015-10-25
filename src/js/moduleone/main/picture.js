@@ -213,27 +213,24 @@ require(['backbone'], function(backbone) {
 
     var picView = Backbone.View.extend({
         el: '.container',
-        initialize:function(){
-        	this.adapt()
-        	this.addEvent();
+        initialize: function() {
+            this.adapt()
+            this.addEvent();
             this.render();
         },
         render: function() {
             var piclist = this.collection.models;
-
             for (var i = 0; i < piclist.length; i++) {
-                this.el.innerHTML += "<section id='main_section'>" 
-                + "<header id='header'><h2>"+piclist[i].get('picDescription')
-                +"</h2></header>" +
-                 "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
+                this.el.innerHTML += "<section id='main_section'>" + "<header id='header'><h2>" + piclist[i].get('picDescription') + "</h2></header>" +
+                    "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
             }
         },
-        addEvent:function(){
-        	var $this=this;
-        	$(window).on('resize',$this.adapt);
+        addEvent: function() {
+            var $this = this;
+            $(window).on('resize', $this.adapt);
         },
-        adapt:function(){
-        	$('.container').width($(window).width());
+        adapt: function() {
+            $('.container').width($(window).width());
         }
     });
 
@@ -243,6 +240,4 @@ require(['backbone'], function(backbone) {
     var picv = new picView({
         collection: picC
     });
-
-    picv.render();
 });

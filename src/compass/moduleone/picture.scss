@@ -1,5 +1,13 @@
 @import "compass/css3";
 @import "../base/basic.scss";
+*{
+    margin: 0;
+    padding: 0;
+    /* 防止点击闪烁 */
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    /* 缩放网页，文字大小不变 */
+    -webkit-text-size-adjust:none;
+}
 .wrapper{
 	@include display-flex;
 	@include flex-direction(column);
