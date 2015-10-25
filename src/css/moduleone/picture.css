@@ -30,14 +30,14 @@ body {
 
 /* line 13, ../../compass/moduleone/picture.scss */
 #main_section {
-  padding: .2rem;
-  margin: 1rem;
-  width: 25rem;
-  height: 25rem;
+  padding: 0rem;
+  margin: 1rem .2rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 /* line 21, ../../compass/moduleone/picture.scss */
 img {
-  width: 25rem;
-  height: 25rem;
+  width: 10rem;
+  height: 10rem;
 }
