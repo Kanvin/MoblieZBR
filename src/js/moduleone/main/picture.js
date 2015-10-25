@@ -214,9 +214,10 @@ require(['backbone'], function(backbone) {
     var picView = Backbone.View.extend({
         el: '.container',
         initialize: function() {
-            this.adapt()
-            this.addEvent();
+            this.adapt();
             this.render();
+            this.addEvent();
+            
         },
         render: function() {
             var piclist = this.collection.models;
