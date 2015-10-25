@@ -1,0 +1,24 @@
+@import "compass/css3";
+@import "../base/basic.scss";
+.wrapper{
+	@include display-flex;
+	@include flex-direction(column);
+}
+.container{
+	@include display-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
+}
+#main_section{
+	padding: .2rem;
+	margin: 1rem;
+	width: 25rem;
+	height: 25rem;
+	
+}
+
+img{
+	width: 25rem;
+	height: 25rem;
+}

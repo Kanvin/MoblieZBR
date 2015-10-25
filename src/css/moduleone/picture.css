@@ -1,0 +1,43 @@
+/* line 5, ../../compass/base/basic.scss */
+body {
+  font-size: 62.5%;
+}
+
+/* line 8, ../../compass/base/basic.scss */
+#wrapper {
+  background: #CCCCCC;
+}
+
+/* line 3, ../../compass/moduleone/picture.scss */
+.wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 7, ../../compass/moduleone/picture.scss */
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* line 13, ../../compass/moduleone/picture.scss */
+#main_section {
+  padding: .2rem;
+  margin: 1rem;
+  width: 25rem;
+  height: 25rem;
+}
+
+/* line 21, ../../compass/moduleone/picture.scss */
+img {
+  width: 25rem;
+  height: 25rem;
+}
