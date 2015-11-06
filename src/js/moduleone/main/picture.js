@@ -217,11 +217,23 @@ require(['backbone'], function(backbone) {
             this.adapt();
             this.render();
             this.addEvent();
-            
+
         },
         render: function() {
+            function loadImage(url, callback) {
+                var img = new Image();
+                img.onload = function() {
+                    img.onload = null;
+                    callback(img);
+                }
+                img.src = url;
+            };
+
+            $(img).appendTo('.container'); 
+
             var piclist = this.collection.models;
             for (var i = 0; i < piclist.length; i++) {
+                
                 this.el.innerHTML += "<section id='main_section'>" + "<header id='header'><h2>" + piclist[i].get('picDescription') + "</h2></header>" +
                     "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
             }
@@ -234,6 +246,7 @@ require(['backbone'], function(backbone) {
             $('.container').width($(window).width());
         }
     });
+
 
     var picC = new picCollection(picModels);
 
