@@ -1,4 +1,4 @@
-require(['backbone'], function(backbone) {
+require(['backbone', 'picLazyLoad'], function(backbone, PicLazyLoad) {
 
     var picModel = Backbone.Model.extend({
         defaults: {
@@ -205,6 +205,7 @@ require(['backbone'], function(backbone) {
     ];
 
 
+
     var picCollection = Backbone.Collection.extend({
         model: picModel
     });
@@ -212,38 +213,16 @@ require(['backbone'], function(backbone) {
     var picC = new picCollection(picModels);
 
     var picView = Backbone.View.extend({
-        el: '.container',
+        el: '.scroll_y',
         initialize: function() {
-            this.adapt();
             this.render();
-            this.addEvent();
-
         },
         render: function() {
-            function loadImage(url, callback) {
-                var img = new Image();
-                img.onload = function() {
-                    img.onload = null;
-                    callback(img);
-                }
-                img.src = url;
-            };
-
-            $(img).appendTo('.container'); 
-
             var piclist = this.collection.models;
             for (var i = 0; i < piclist.length; i++) {
-                
                 this.el.innerHTML += "<section id='main_section'>" + "<header id='header'><h2>" + piclist[i].get('picDescription') + "</h2></header>" +
-                    "<img src='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
+                    "<img class='lazyload' src='https://www.baidu.com/img/bdlogo.png' data-original='../../img/moduleone/" + piclist[i].get('picUrl') + "'>" + "</section>"
             }
-        },
-        addEvent: function() {
-            var $this = this;
-            $(window).on('resize', $this.adapt);
-        },
-        adapt: function() {
-            $('.container').width($(window).width());
         }
     });
 
@@ -253,5 +232,16 @@ require(['backbone'], function(backbone) {
 
     var picv = new picView({
         collection: picC
+    });
+
+
+    // 容器纵向滚动懒加载
+    picLazyLoad({
+        parent: 'scroll_y',
+        className: "lazyload",
+        picError: 'https://www.baidu.com/img/bdlogo.png',
+        callback: function(me) {
+            me.classList.add('fadeIn');
+        }
     });
 });

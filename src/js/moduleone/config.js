@@ -6,7 +6,8 @@ var require = {
 		underscore: 'lib/underscore',
 		zepto: 'lib/zepto',
 		jquery: 'lib/zepto',
-		localStorage: 'lib/backbone.localStorage'
+		localStorage: 'lib/backbone.localStorage',
+		picLazyLoad: 'lib/picLazyLoad'
 	},
 	shim: {
 		'jquery': {

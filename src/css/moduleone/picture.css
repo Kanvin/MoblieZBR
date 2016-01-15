@@ -28,7 +28,7 @@ body {
 }
 
 /* line 15, ../../compass/moduleone/picture.scss */
-.container {
+.scroll_y {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -47,7 +47,7 @@ body {
   height: 10rem;
 }
 
-/* line 29, ../../compass/moduleone/picture.scss */
+/* line 28, ../../compass/moduleone/picture.scss */
 img {
   width: 10rem;
   height: 10rem;
