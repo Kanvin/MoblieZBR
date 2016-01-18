@@ -1,0 +1,40 @@
+@import "../base/basic.scss";
+@import "compass/css3.scss";
+
+
+#my_content{
+	padding:.2rem;
+	margin:.2rem;
+	border: 1rem solid red;
+	@include flex_left_to_right;
+    text-align: center;
+}
+
+#my_content section{
+	padding:.2rem;
+	margin:.2rem;
+	min-width: 5rem;
+	max-width: 50rem;
+	border: .2rem solid green;
+}
+
+#my_header {
+	margin:.1rem;
+	padding:.1rem;
+}
+
+#my_ul{
+	margin:.1rem;
+	padding:.1rem;
+	@include flex_row;
+    text-align: center;
+}
+
+#my_header li{
+	padding:.2rem;
+	margin:.2rem;
+	font-size: 1.2rem;
+	background: red;
+	display:inline-block;
+	min-width: 2rem;
+}

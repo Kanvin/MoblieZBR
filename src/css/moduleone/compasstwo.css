@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* line 5, ../../compass/base/basic.scss */
+body {
+  font-size: 62.5%;
+}
+
+/**主要用于一行一行的排列形式**/
+/**主要用于一列一列的排列形式**/
+/**主要用于从左到右的排列形式**/
+/**主要用于从上到下的排列形式**/
+/* line 43, ../../compass/base/basic.scss */
+#my_wrapper {
+  margin: 0rem;
+  padding: 0rem;
+  display: -webkit-row;
+  display: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 5, ../../compass/moduleone/compasstwo.scss */
+#my_content {
+  padding: .2rem;
+  margin: .2rem;
+  border: 1rem solid red;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* line 13, ../../compass/moduleone/compasstwo.scss */
+#my_content section {
+  padding: .2rem;
+  margin: .2rem;
+  min-width: 5rem;
+  max-width: 50rem;
+  border: .2rem solid green;
+}
+
+/* line 21, ../../compass/moduleone/compasstwo.scss */
+#my_header {
+  margin: .1rem;
+  padding: .1rem;
+}
+
+/* line 26, ../../compass/moduleone/compasstwo.scss */
+#my_ul {
+  margin: .1rem;
+  padding: .1rem;
+  display: -webkit-row;
+  display: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* line 33, ../../compass/moduleone/compasstwo.scss */
+#my_header li {
+  padding: .2rem;
+  margin: .2rem;
+  font-size: 1.2rem;
+  background: red;
+  display: inline-block;
+  min-width: 2rem;
+}
