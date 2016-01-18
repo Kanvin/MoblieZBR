@@ -4,9 +4,22 @@ body {
   font-size: 62.5%;
 }
 
-/* line 8, ../../compass/base/basic.scss */
-#wrapper {
-  background: #CCCCCC;
+/**主要用于一行一行的排列形式**/
+/**主要用于一列一列的排列形式**/
+/**主要用于从左到右的排列形式**/
+/**主要用于从上到下的排列形式**/
+/* line 43, ../../compass/base/basic.scss */
+#my_wrapper {
+  margin: 0rem;
+  padding: 0rem;
+  display: -webkit-row;
+  display: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 /* line 3, ../../compass/moduleone/compassone.scss */

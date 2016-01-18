@@ -5,9 +5,55 @@ $blue: #CCCCCC;
 body{
     font-size: 62.5%;
 }
-#wrapper{
-    background: $blue;
+
+/**主要用于一行一行的排列形式**/
+@mixin flex_row{
+	@include display-flex(row);
+	@include flex-wrap(wrap);
+	@include align_items(center);
+    @include justify-content(center);
 }
 
+/**主要用于一列一列的排列形式**/
+@mixin flex_column{
+	@include display-flex(inline-flex);
+	@include flex-wrap(wrap);
+	@include align_items(center);
+    @include justify-content(center);
+}
 
+/**主要用于从左到右的排列形式**/
+@mixin flex_left_to_right{
+	@include display-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include align_items(center);
+    @include justify-content(center);
+}
 
+/**主要用于从上到下的排列形式**/
+@mixin flex_top_to_bottom{
+	@include display-flex;
+	@include flex-direction(column);
+	@include flex-wrap(wrap);
+	@include align_items(center);
+    @include justify-content(center);
+}
+
+#my_wrapper{
+    margin: 0rem;
+	padding: 0rem;
+	@include flex_row;
+}
+
+#my_content{
+
+}
+
+#my_header{
+
+}
+
+#my_footer{
+
+}
